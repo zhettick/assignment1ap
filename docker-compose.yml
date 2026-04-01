@@ -1,0 +1,10 @@
+
+services:
+  order-db:
+    image: postgres:15-alpine
+    environment: [POSTGRES_USER=user, POSTGRES_PASSWORD=pass, POSTGRES_DB=order_db]
+    ports: ["5431:5432"]
+  payment-db:
+    image: postgres:15-alpine
+    environment: [POSTGRES_USER=user, POSTGRES_PASSWORD=pass, POSTGRES_DB=payment_db]
+    ports: ["5433:5432"]
